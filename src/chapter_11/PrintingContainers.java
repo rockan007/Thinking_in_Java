@@ -1,8 +1,8 @@
 package chapter_11;
 
-import java.util.Collection;
-import java.util.Map;
-//import static utils.Print;
+import java.util.*;
+
+import static utils.Print.*;
 
 public class PrintingContainers {
     static Collection fill(Collection<String> collection) {
@@ -22,6 +22,13 @@ public class PrintingContainers {
     }
 
     public static void main(String[] args) {
-
+        print(fill(new ArrayList<String>()) );
+        print(fill(new LinkedList<String>()) );
+        print(fill(new HashSet<String>()) );
+        print(fill(new TreeSet<String>()) );
+        print(fill(new LinkedHashSet<String>()) );
+        print(fill(new HashMap<>()));
+        print(fill(new TreeMap<>()));
+        print(fill(new LinkedHashMap<>()));
     }
 }
