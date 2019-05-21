@@ -1,25 +1,23 @@
 package utils;
 
-import java.util.Date;
+import java.io.*;
 
 public class Print {
-    public static void print(double d) {
-        System.out.println(d);
+    // Print with a newline:
+    public static void print(Object obj) {
+        System.out.println(obj);
     }
-
-    public static void print(float f) {
-        System.out.println(f);
+    // Print a newline by itself:
+    public static void print() {
+        System.out.println();
     }
-
-    public static void print(String s) {
-        System.out.println(s);
+    // Print with no line break:
+    public static void printnb(Object obj) {
+        System.out.print(obj);
     }
-
-    public static void print(Date date) {
-        System.out.println(date.toString());
-    }
-
-    public static void print(boolean b) {
-        System.out.println(b);
+    // The new Java SE5 printf() (from C):
+    public static PrintStream
+    printf(String format, Object... args) {
+        return System.out.printf(format, args);
     }
 }
